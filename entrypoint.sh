@@ -37,6 +37,7 @@ if [ -z "${INFLUXDB_BUCKET}" ]; then
 fi
 
 while true; do
+    echo "fetch weather forecast..."
     python3 main.py ${LATITUDE} ${LONGITUDE} "${INFLUXDB_TOKEN}" --influx_url "${INFLUXDB_URL}" --influx_org "${INFLUXDB_ORG}" --influx_bucket "${INFLUXDB_BUCKET}" --locality "${LOCALITY:-Home}"
     echo "sleep ${UPDATE_INTERVAL_IN_SECONDS:-21600}"
     sleep ${UPDATE_INTERVAL_IN_SECONDS:-21600}
