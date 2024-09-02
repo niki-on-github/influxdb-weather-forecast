@@ -51,7 +51,6 @@ if __name__ == "__main__":
             [{
                 "measurement": "WeatherForecast",
                 "tags": {
-                    "Server": socket.getfqdn(),
                     "Longitude": data['geometry']['coordinates'][0],
                     "Latitude": data['geometry']['coordinates'][1],
                     "Height": str(float(data['geometry']['coordinates'][2])*0.3048),
